@@ -15,9 +15,4 @@ public class Feet {
         Feet that = (Feet) o;
         return Objects.equals(value, that.value);
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(value);
-    }
 }
