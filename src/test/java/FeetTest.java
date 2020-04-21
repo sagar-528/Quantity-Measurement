@@ -22,4 +22,10 @@ public class FeetTest {
         Feet feet = new Feet(0.0);
         Assert.assertNotEquals(feet, null);
     }
+
+    @Test
+    public void givenStringAndFeet_ShouldReturnTrue() {
+        Feet feet1 = new Feet(0.0);
+        Assert.assertNotEquals(feet1, "Feet");
+    }
 }
