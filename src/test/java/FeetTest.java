@@ -5,80 +5,44 @@ public class FeetTest {
 
     @Test
     public void given0FeetAnd0Feet_ShouldReturnEquals() {
-        Feet feet1 = new Feet(0.0);
-        Feet feet2 = new Feet(0.0);
+        Length feet1 = new Length(Length.Unit.FEET ,0.0);
+        Length feet2 = new Length(Length.Unit.FEET ,0.0);
         Assert.assertEquals(feet1, feet2);
     }
 
     @Test
-    public void given1FeetAnd2Feet_ShouldReturnNotEquals() {
-        Feet feet1 = new Feet(0.0);
-        Feet feet2 = new Feet(1.1);
+    public void given0FeetAnd1Feet_ShouldReturnNotEquals() {
+        Length feet1 = new Length(Length.Unit.FEET ,0.0);
+        Length feet2 = new Length(Length.Unit.FEET ,1.1);
         Assert.assertNotEquals(feet1, feet2);
     }
 
     @Test
-    public void givenFeetNullObject_ShouldReturnFalse() {
-        Feet feet = new Feet(0.0);
-        Assert.assertNotEquals(feet, null);
+    public void given1FeetAnd2FeetNull_ShouldReturnFalse() {
+        Length feet1 = new Length(Length.Unit.FEET ,0.0);
+        Length feet2 = null;
+        boolean type = feet1.equals(feet2);
+        Assert.assertEquals(false, type);
     }
 
     @Test
-    public void givenFeetDifferentReference_ShouldReturnEqual() {
-        Feet feet1 = new Feet(0.0);
-        Feet feet2 = new Feet(0.0);
-        Assert.assertNotSame(feet1, feet2);
-    }
-
-    @Test
-    public void givenDifferentTypeAndFeet_ShouldReturnTrue() {
-        Feet feet1 = new Feet(0.0);
-        Assert.assertNotEquals(feet1, "Feet");
-    }
-
-    @Test
-    public void givenFeetSameReference_ShouldReturnTrue() {
-        Feet feet = new Feet(0.0);
-        Assert.assertEquals(feet, feet);
-    }
-
-    @Test
-    public void given0InchAnd0Inch_ShouldReturnEquals() {
-        Inch inch1 = new Inch(0.0);
-        Inch inch2 = new Inch(0.0);
+    public void given0InchAnd0Inch_ShouldReturnEqual() {
+        Length inch1 = new Length(Length.Unit.INCH ,0.0);
+        Length inch2 = new Length(Length.Unit.INCH ,0.0);
         Assert.assertEquals(inch1, inch2);
     }
 
-
     @Test
-    public void given1InchAnd2Inch_ShouldReturnEquals() {
-        Inch inch1 = new Inch(0.0);
-        Inch inch2 = new Inch(1.1);
+    public void given0InchAnd1Inch_ShouldReturnNotEquals() {
+        Length inch1 = new Length(Length.Unit.INCH ,0.0);
+        Length inch2 = new Length(Length.Unit.INCH ,1.0);
         Assert.assertNotEquals(inch1, inch2);
     }
 
     @Test
-    public void givenInchNullObject_ShouldReturnFalse() {
-        Inch inch = new Inch(0.0);
-        Assert.assertNotEquals(inch, null);
-    }
-
-    @Test
-    public void givenInchDifferentReference_ShouldReturnEqual() {
-        Inch inch1 = new Inch(0.0);
-        Inch inch2 = new Inch(0.0);
-        Assert.assertNotSame(inch1, inch2);
-    }
-
-    @Test
-    public void givenInchSameReference_ShouldReturnTrue() {
-        Inch inch = new Inch(0.0);
-        Assert.assertEquals(inch, inch);
-    }
-
-    @Test
-    public void givenDifferentTypeAndInch_ShouldReturnTrue() {
-        Inch inch = new Inch(0.0);
-        Assert.assertNotEquals(inch, "Inch");
+    public void given1FeetAnd1Inch_ShouldReturnNotEquals() {
+        Length feet1 = new Length(Length.Unit.FEET ,1.0);
+        Length inch2 = new Length(Length.Unit.INCH ,1.0);
+        Assert.assertNotEquals(feet1, inch2);
     }
 }

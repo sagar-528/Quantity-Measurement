@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FeetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-21T17:02:01" hostname="Sagar" time="0.058">
+<testsuite name="FeetTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-04-21T18:07:17" hostname="Sagar" time="0.073">
   <properties/>
-  <testcase name="givenDifferentTypeAndInch_ShouldReturnTrue" classname="FeetTest" time="0.058"/>
+  <testcase name="given0InchAnd1Inch_ShouldReturnNotEquals" classname="FeetTest" time="0.056"/>
+  <testcase name="given0InchAnd0Inch_ShouldReturnEqual" classname="FeetTest" time="0.004"/>
+  <testcase name="given1FeetAnd1Inch_ShouldReturnNotEquals" classname="FeetTest" time="0.005"/>
+  <testcase name="given0FeetAnd0Feet_ShouldReturnEquals" classname="FeetTest" time="0.001"/>
+  <testcase name="given1FeetAnd2FeetNull_ShouldReturnFalse" classname="FeetTest" time="0.001"/>
+  <testcase name="given0FeetAnd1Feet_ShouldReturnNotEquals" classname="FeetTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
