@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FeetTest {
+public class QuantityMeasurementTest {
 
     @Test
     public void given0FeetAnd0Feet_ShouldReturnEquals() {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="QuantityMeasurementTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-04-21T19:23:57" hostname="Sagar" time="0.11">
+  <properties/>
+  <testcase name="given0InchAnd1Inch_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.089"/>
+  <testcase name="given1InchAnd2InchType_ShouldReturnFalse" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0InchAnd0Inch_ShouldReturnEqual" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1FeetAnd1Inch_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0FeetAnd0Feet_ShouldReturnEquals" classname="QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given1FeetAnd1Inch_ByComparingLength_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given1FeetAnd2FeetNull_ShouldReturnFalse" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1InchAnd2InchReference_ShouldReturnTrue" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1FeetAnd2FeetReference_ShouldReturnTrue" classname="QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given1InchAnd12Feet_ByComparingLength_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0FeetAnd0Inch_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0FeetAnd1Feet_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1InchAnd1Feet_ByComparingLength_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1InchAnd2InchNull_ShouldReturnFalse" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1FeetAnd2FeetType_ShouldReturnFalse" classname="QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1FeetAnd12Inch_ByComparingLength_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
