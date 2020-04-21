@@ -16,4 +16,10 @@ public class FeetTest {
         Feet feet2 = new Feet(1.1);
         Assert.assertNotEquals(feet1, feet2);
     }
+
+    @Test
+    public void givenNullObject_ShouldReturnFalse() {
+        Feet feet = new Feet(0.0);
+        Assert.assertNotEquals(feet, null);
+    }
 }
