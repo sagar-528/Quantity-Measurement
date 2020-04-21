@@ -24,8 +24,16 @@ public class FeetTest {
     }
 
     @Test
+    public void given() {
+        Feet feet1 = new Feet(0.0);
+        Feet feet2 = new Feet(0.0);
+        Assert.assertNotSame(feet1, feet2);
+    }
+
+    @Test
     public void givenStringAndFeet_ShouldReturnTrue() {
         Feet feet1 = new Feet(0.0);
         Assert.assertNotEquals(feet1, "Feet");
     }
+
 }
