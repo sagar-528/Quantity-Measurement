@@ -24,7 +24,7 @@ public class FeetTest {
     }
 
     @Test
-    public void givenDifferentReference_ShouldReturnEqual() {
+    public void givenFeetDifferentReference_ShouldReturnEqual() {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(0.0);
         Assert.assertNotSame(feet1, feet2);
@@ -37,7 +37,7 @@ public class FeetTest {
     }
 
     @Test
-    public void givenSameReference_ShouldReturnTrue() {
+    public void givenFeetSameReference_ShouldReturnTrue() {
         Feet feet = new Feet(0.0);
         Assert.assertEquals(feet, feet);
     }
@@ -62,4 +62,19 @@ public class FeetTest {
         Inch inch = new Inch(0.0);
         Assert.assertNotEquals(inch, null);
     }
+
+    @Test
+    public void givenInchDifferentReference_ShouldReturnEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        Assert.assertNotSame(inch1, inch2);
+    }
+
+    @Test
+    public void givenInchSameReference_ShouldReturnTrue() {
+        Inch inch = new Inch(0.0);
+        Assert.assertEquals(inch, inch);
+    }
+
+
 }
