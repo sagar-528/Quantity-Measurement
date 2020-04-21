@@ -45,4 +45,11 @@ public class FeetTest {
         Length inch2 = new Length(Length.Unit.INCH ,1.0);
         Assert.assertNotEquals(feet1, inch2);
     }
+
+    @Test
+    public void given0FeetAnd0Inch_ShouldReturnNotEquals() {
+        Length feet1 = new Length(Length.Unit.FEET ,0.0);
+        Length inch2 = new Length(Length.Unit.INCH ,0.0);
+        Assert.assertNotEquals(feet1, inch2);
+    }
 }
