@@ -48,4 +48,12 @@ public class FeetTest {
         Inch inch2 = new Inch(0.0);
         Assert.assertEquals(inch1, inch2);
     }
+
+
+    @Test
+    public void given1InchAnd2Inch_ShouldReturnEquals() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.1);
+        Assert.assertNotEquals(inch1, inch2);
+    }
 }
