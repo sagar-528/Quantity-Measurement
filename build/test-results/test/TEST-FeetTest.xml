@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FeetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-21T18:26:42" hostname="Sagar" time="0.045">
+<testsuite name="FeetTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-04-21T19:12:37" hostname="Sagar" time="0.09">
   <properties/>
-  <testcase name="given1InchAnd1Feet_ShouldReturnNotEquals" classname="FeetTest" time="0.045"/>
+  <testcase name="given0InchAnd1Inch_ShouldReturnNotEquals" classname="FeetTest" time="0.006"/>
+  <testcase name="given1InchAnd2InchType_ShouldReturnFalse" classname="FeetTest" time="0.009"/>
+  <testcase name="given0InchAnd0Inch_ShouldReturnEqual" classname="FeetTest" time="0.004"/>
+  <testcase name="given1FeetAnd1Inch_ShouldReturnNotEquals" classname="FeetTest" time="0.002"/>
+  <testcase name="given0FeetAnd0Feet_ShouldReturnEquals" classname="FeetTest" time="0.004"/>
+  <testcase name="given1FeetAnd1Inch_ByComparingLength_ShouldReturnNotEquals" classname="FeetTest" time="0.003"/>
+  <testcase name="given1FeetAnd2FeetNull_ShouldReturnFalse" classname="FeetTest" time="0.001"/>
+  <testcase name="given1InchAnd2InchReference_ShouldReturnTrue" classname="FeetTest" time="0.001"/>
+  <testcase name="given1FeetAnd2FeetReference_ShouldReturnTrue" classname="FeetTest" time="0.001"/>
+  <testcase name="given1InchAnd12Feet_ByComparingLength_ShouldReturnNotEquals" classname="FeetTest" time="0.0"/>
+  <testcase name="given0FeetAnd0Inch_ShouldReturnNotEquals" classname="FeetTest" time="0.0"/>
+  <testcase name="given0FeetAnd1Feet_ShouldReturnNotEquals" classname="FeetTest" time="0.0"/>
+  <testcase name="given1InchAnd1Feet_ByComparingLength_ShouldReturnNotEquals" classname="FeetTest" time="0.0"/>
+  <testcase name="given1InchAnd2InchNull_ShouldReturnFalse" classname="FeetTest" time="0.0"/>
+  <testcase name="given1FeetAnd2FeetType_ShouldReturnFalse" classname="FeetTest" time="0.0"/>
+  <testcase name="given1FeetAnd12Inch_ByComparingLength_ShouldReturnNotEquals" classname="FeetTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
