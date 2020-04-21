@@ -18,7 +18,7 @@ public class FeetTest {
     }
 
     @Test
-    public void givenNullObject_ShouldReturnFalse() {
+    public void givenFeetNullObject_ShouldReturnFalse() {
         Feet feet = new Feet(0.0);
         Assert.assertNotEquals(feet, null);
     }
@@ -55,5 +55,11 @@ public class FeetTest {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(1.1);
         Assert.assertNotEquals(inch1, inch2);
+    }
+
+    @Test
+    public void givenInchNullObject_ShouldReturnFalse() {
+        Inch inch = new Inch(0.0);
+        Assert.assertNotEquals(inch, null);
     }
 }
