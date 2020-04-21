@@ -26,6 +26,18 @@ public class FeetTest {
     }
 
     @Test
+    public void given1FeetAnd2FeetReference_ShouldReturnTrue() {
+        Length feet = new Length(Length.Unit.FEET ,0.0);
+        Assert.assertEquals(feet, feet);
+    }
+
+    @Test
+    public void given1FeetAnd2FeetType_ShouldReturnFalse() {
+        Length feet = new Length(Length.Unit.FEET ,0.0);
+        Assert.assertNotSame(feet, "Feet");
+    }
+
+    @Test
     public void given0InchAnd0Inch_ShouldReturnEqual() {
         Length inch1 = new Length(Length.Unit.INCH ,0.0);
         Length inch2 = new Length(Length.Unit.INCH ,0.0);
@@ -37,6 +49,26 @@ public class FeetTest {
         Length inch1 = new Length(Length.Unit.INCH ,0.0);
         Length inch2 = new Length(Length.Unit.INCH ,1.0);
         Assert.assertNotEquals(inch1, inch2);
+    }
+
+    @Test
+    public void given1InchAnd2InchNull_ShouldReturnFalse() {
+        Length inch1 = new Length(Length.Unit.INCH ,0.0);
+        Length inch2 = null;
+        boolean type = inch1.equals(inch2);
+        Assert.assertEquals(false, type);
+    }
+
+    @Test
+    public void given1InchAnd2InchReference_ShouldReturnTrue() {
+        Length feet = new Length(Length.Unit.INCH ,0.0);
+        Assert.assertEquals(feet, feet);
+    }
+
+    @Test
+    public void given1InchAnd2InchType_ShouldReturnFalse() {
+        Length inch = new Length(Length.Unit.INCH ,0.0);
+        Assert.assertNotSame(inch, "Feet");
     }
 
     @Test
