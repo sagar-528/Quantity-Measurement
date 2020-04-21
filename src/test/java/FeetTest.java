@@ -76,5 +76,9 @@ public class FeetTest {
         Assert.assertEquals(inch, inch);
     }
 
-
+    @Test
+    public void givenDifferentTypeAndInch_ShouldReturnTrue() {
+        Inch inch = new Inch(0.0);
+        Assert.assertNotEquals(inch, "Inch");
+    }
 }
