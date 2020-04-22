@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-22T20:07:14" hostname="Sagar" time="0.069">
+<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-22T20:10:35" hostname="Sagar" time="0.065">
   <properties/>
-  <testcase name="given1InchAnd1Yard_ByComparingLength_ShouldReturnNotEquals" classname="QuantityMeasurementTest" time="0.069"/>
+  <testcase name="given1YardAnd36Inch_ByComparingLength_ShouldReturnEquals" classname="QuantityMeasurementTest" time="0.065"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
