@@ -217,4 +217,12 @@ public class QuantityMeasurementTest {
         Boolean result = Unit.compare(gallon, litre);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void given1LitreAnd1000Ml_ShouldReturnEqual() throws Exception {
+        Quantity litre = new Quantity(Unit.LITRE ,1);
+        Quantity ml = new Quantity(Unit.ML ,1000);
+        Boolean result = Unit.compare(litre, ml);
+        Assert.assertTrue(result);
+    }
 }
