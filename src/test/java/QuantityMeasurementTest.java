@@ -173,4 +173,14 @@ public class QuantityMeasurementTest {
         boolean compareCheck =Unit.compare(inch, cm);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given2InchAnd2Inch_ShouldReturn4Inch() {
+        Length inch1 = new Length(Unit.INCH ,2.0);
+        Length inch2 = new Length(Unit.INCH ,2.0);
+        OperationImpl op = new OperationImpl();
+        double addition = op.add(inch1, inch2);
+        Assert.assertEquals(4, addition, 0.0);
+    }
+
 }
