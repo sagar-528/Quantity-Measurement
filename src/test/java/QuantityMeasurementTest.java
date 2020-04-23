@@ -183,4 +183,12 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(4, addition, 0.0);
     }
 
+    @Test
+    public void given1FeetAnd2Inch_ShouldReturn4Inch() {
+        Length feet = new Length(Unit.FEET ,1.0);
+        Length inch = new Length(Unit.INCH ,2.0);
+        OperationImpl op = new OperationImpl();
+        double addition = op.add(feet, inch);
+        Assert.assertEquals(14, addition, 0.0);
+    }
 }
