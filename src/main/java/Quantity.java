@@ -1,11 +1,9 @@
-import java.util.Objects;
-
-public class Length
+public class Quantity
 {
     public final Unit unit;
     public final double value;
 
-    public Length(Unit unit, double value) {
+    public Quantity(Unit unit, double value) {
         this.unit = unit;
         this.value = value;
     }
@@ -14,8 +12,8 @@ public class Length
     public boolean equals(Object that) {
         if (this == that) return true;
         if (that == null || getClass() != that.getClass()) return false;
-        Length length = (Length) that;
-        return Double.compare(length.value, value) == 0 &&
-                unit == length.unit;
+        Quantity quantity = (Quantity) that;
+        return Double.compare(quantity.value, value) == 0 &&
+                unit == quantity.unit;
     }
 }

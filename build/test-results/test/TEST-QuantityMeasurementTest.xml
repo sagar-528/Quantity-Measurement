@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-23T19:57:39" hostname="Sagar" time="0.079">
+  <properties/>
+  <testcase name="given1GallonAnd3Point78Litres_ShouldReturnEqual" classname="QuantityMeasurementTest" time="0.079"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

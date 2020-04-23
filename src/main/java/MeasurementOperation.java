@@ -1,4 +1,4 @@
 public interface MeasurementOperation {
 
-    Double add(Length length1, Length length2);
+    Double add(Quantity quantity1, Quantity quantity2);
 }
