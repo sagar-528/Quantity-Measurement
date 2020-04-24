@@ -280,4 +280,13 @@ public class QuantityMeasurementTest {
         Boolean result = Unit.compare(tonne, kg);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void given1TonneAnd1000Grams_ShouldReturn1001Kg() throws Exception {
+        Quantity tonne = new Quantity(Unit.TONNE ,1.0);
+        Quantity gms= new Quantity(Unit.GRAM ,1000);
+        OperationImpl op = new OperationImpl();
+        double addition = op.add(tonne, gms);
+        Assert.assertEquals(1001, addition, 0.1);
+    }
 }
