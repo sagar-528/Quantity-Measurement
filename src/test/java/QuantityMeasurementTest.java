@@ -234,4 +234,13 @@ public class QuantityMeasurementTest {
         double addition = op.add(gallon, litre);
         Assert.assertEquals(7.57, addition, 0.1);
     }
+
+    @Test
+    public void given1litresAnd1000Ml_ShouldReturn2Litres() {
+        Quantity litre = new Quantity(Unit.LITRE ,1.0);
+        Quantity ml = new Quantity(Unit.ML ,1000);
+        OperationImpl op = new OperationImpl();
+        double addition = op.add(litre, ml);
+        Assert.assertEquals(2, addition, 0.1);
+    }
 }
