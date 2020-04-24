@@ -1,9 +1,17 @@
 public enum Unit {
+    //Unit for Length
     FEET(12.0, "Length"), INCH(1.0, "Length"),
     YARD(36.0, "Length"), CM(0.4, "Length"),
+
+    //Unit for Volume
     LITRE(1.0, "Volume"), GALLON(3.78, "Volume"),
-    ML(0.001, "Volume"), GRAM(0.001, "Mass"),
+    ML(0.001, "Volume"),
+
+    //Unit for Mass
+    GRAM(0.001, "Mass"),
     KG(1.0, "Mass"), TONNE(1000.0, "Mass"),
+
+    //Unit for Temperature
     FAHRENHEIT(1.0, "Temperature"), CELSIUS(2.12, "Temperature");
 
     double baseUnit;
