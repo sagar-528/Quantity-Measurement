@@ -3,9 +3,13 @@ public class Quantity
     public final Unit unit;
     public final double value;
 
-    public Quantity(Unit unit, double value) {
+    public Quantity(Unit unit, double value) throws Exception
+    {
         this.unit = unit;
-        this.value = value;
+        if (value < 0.0) {
+            throw new Exception("value should be positive", Exception.ExceptionType.INVALID_VALUE_GIVEN);
+        }
+            this.value = value;
     }
 
     @Override

@@ -4,21 +4,21 @@ import org.junit.Test;
 public class QuantityMeasurementTest {
 
     @Test
-    public void given0FeetAnd0Feet_ShouldReturnEquals() {
+    public void given0FeetAnd0Feet_ShouldReturnEquals() throws Exception {
         Quantity feet1 = new Quantity(Unit.FEET ,0.0);
         Quantity feet2 = new Quantity(Unit.FEET ,0.0);
         Assert.assertEquals(feet1, feet2);
     }
 
     @Test
-    public void given0FeetAnd1Feet_ShouldReturnNotEquals() {
+    public void given0FeetAnd1Feet_ShouldReturnNotEquals() throws Exception {
         Quantity feet1 = new Quantity(Unit.FEET ,0.0);
         Quantity feet2 = new Quantity(Unit.FEET ,1.1);
         Assert.assertNotEquals(feet1, feet2);
     }
 
     @Test
-    public void given1FeetAnd2FeetNull_ShouldReturnFalse() {
+    public void given1FeetAnd2FeetNull_ShouldReturnFalse() throws Exception {
         Quantity feet1 = new Quantity(Unit.FEET ,0.0);
         Quantity feet2 = null;
         boolean type = feet1.equals(feet2);
@@ -26,33 +26,33 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1FeetAnd2FeetReference_ShouldReturnTrue() {
+    public void given1FeetAnd2FeetReference_ShouldReturnTrue() throws Exception {
         Quantity feet = new Quantity(Unit.FEET ,0.0);
         Assert.assertEquals(feet, feet);
     }
 
     @Test
-    public void given1FeetAnd2FeetType_ShouldReturnFalse() {
+    public void given1FeetAnd2FeetType_ShouldReturnFalse() throws Exception {
         Quantity feet = new Quantity(Unit.FEET ,0.0);
         Assert.assertNotSame(feet, "Feet");
     }
 
     @Test
-    public void given0InchAnd0Inch_ShouldReturnEqual() {
+    public void given0InchAnd0Inch_ShouldReturnEqual() throws Exception {
         Quantity inch1 = new Quantity(Unit.INCH ,0.0);
         Quantity inch2 = new Quantity(Unit.INCH ,0.0);
         Assert.assertEquals(inch1, inch2);
     }
 
     @Test
-    public void given0InchAnd1Inch_ShouldReturnNotEquals() {
+    public void given0InchAnd1Inch_ShouldReturnNotEquals() throws Exception {
         Quantity inch1 = new Quantity(Unit.INCH ,0.0);
         Quantity inch2 = new Quantity(Unit.INCH ,1.0);
         Assert.assertNotEquals(inch1, inch2);
     }
 
     @Test
-    public void given1InchAnd2InchNull_ShouldReturnFalse() {
+    public void given1InchAnd2InchNull_ShouldReturnFalse() throws Exception {
         Quantity inch1 = new Quantity(Unit.INCH ,0.0);
         Quantity inch2 = null;
         boolean type = inch1.equals(inch2);
@@ -60,19 +60,19 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1InchAnd2InchReference_ShouldReturnTrue() {
+    public void given1InchAnd2InchReference_ShouldReturnTrue() throws Exception {
         Quantity feet = new Quantity(Unit.INCH ,0.0);
         Assert.assertEquals(feet, feet);
     }
 
     @Test
-    public void given1InchAnd2InchType_ShouldReturnFalse() {
+    public void given1InchAnd2InchType_ShouldReturnFalse() throws Exception {
         Quantity inch = new Quantity(Unit.INCH ,0.0);
         Assert.assertNotSame(inch, "Feet");
     }
 
     @Test
-    public void given1FeetAnd1Inch_ShouldReturnNotEquals() {
+    public void given1FeetAnd1Inch_ShouldReturnNotEquals() throws Exception {
         Quantity feet = new Quantity(Unit.FEET ,1.0);
         Quantity inch = new Quantity(Unit.INCH ,1.0);
         Assert.assertNotEquals(feet, inch);
@@ -175,7 +175,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2InchAnd2Inch_ShouldReturn4Inch() {
+    public void given2InchAnd2Inch_ShouldReturn4Inch() throws Exception {
         Quantity inch1 = new Quantity(Unit.INCH ,2.0);
         Quantity inch2 = new Quantity(Unit.INCH ,2.0);
         OperationImpl op = new OperationImpl();
@@ -184,7 +184,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1FeetAnd2Inch_ShouldReturn14Inch() {
+    public void given1FeetAnd2Inch_ShouldReturn14Inch() throws Exception {
         Quantity feet = new Quantity(Unit.FEET ,1.0);
         Quantity inch = new Quantity(Unit.INCH ,2.0);
         OperationImpl op = new OperationImpl();
@@ -193,7 +193,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1FeetAnd1Feet_ShouldReturn24Inch() {
+    public void given1FeetAnd1Feet_ShouldReturn24Inch() throws Exception {
         Quantity feet1 = new Quantity(Unit.FEET ,1.0);
         Quantity feet2 = new Quantity(Unit.FEET ,1.0);
         OperationImpl op = new OperationImpl();
@@ -202,7 +202,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2InchAnd2Point5Cm_ShouldReturn3Inch() {
+    public void given2InchAnd2Point5Cm_ShouldReturn3Inch() throws Exception {
         Quantity inch = new Quantity(Unit.INCH ,2.0);
         Quantity cm = new Quantity(Unit.CM ,2.5);
         OperationImpl op = new OperationImpl();
@@ -227,7 +227,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1GallonAnd3Point78Litres_ShouldReturn7point78Litres() {
+    public void given1GallonAnd3Point78Litres_ShouldReturn7point78Litres() throws Exception {
         Quantity gallon = new Quantity(Unit.GALLON ,1.0);
         Quantity litre = new Quantity(Unit.INCH ,3.78);
         OperationImpl op = new OperationImpl();
@@ -236,11 +236,32 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1litresAnd1000Ml_ShouldReturn2Litres() {
+    public void given1litresAnd1000Ml_ShouldReturn2Litres() throws Exception {
         Quantity litre = new Quantity(Unit.LITRE ,1.0);
         Quantity ml = new Quantity(Unit.ML ,1000);
         OperationImpl op = new OperationImpl();
         double addition = op.add(litre, ml);
         Assert.assertEquals(2, addition, 0.1);
+    }
+
+    @Test
+    public void givenLitreAndFeet_ShouldThrowException() throws Exception {
+        Quantity litre = new Quantity(Unit.LITRE ,1.0);
+        Quantity feet = new Quantity(Unit.FEET, 10.0);
+        OperationImpl op = new OperationImpl();
+        try{
+            double result = op.add(feet, litre);
+        }catch (Exception e){
+            Assert.assertEquals("Invalid Quantity name Measurement", e.getMessage());
+        }
+    }
+
+    @Test
+    public void givenNegativeLength_ShouldThrowException() throws Exception {
+        try{
+            Quantity feet = new Quantity(Unit.FEET, -1.0);
+        }catch (Exception e){
+            Assert.assertEquals("value should be positive", e.getMessage());
+        }
     }
 }
