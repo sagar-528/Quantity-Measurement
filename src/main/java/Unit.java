@@ -1,8 +1,8 @@
 public enum Unit {
     FEET(12.0, "Length"), INCH(1.0, "Length"),
     YARD(36.0, "Length"), CM(0.4, "Length"),
-    LITRE(1000, "Volume"), GALLON(3780, "Volume"),
-    ML(1, "Volume");
+    LITRE(1, "Volume"), GALLON(3.78, "Volume"),
+    ML(0.001, "Volume");
 
     double baseUnit;
     String quantityName;

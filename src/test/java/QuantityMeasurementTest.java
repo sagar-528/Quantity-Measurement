@@ -225,4 +225,13 @@ public class QuantityMeasurementTest {
         Boolean result = Unit.compare(litre, ml);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void given1GallonAnd3Point78Litres_ShouldReturn7point78Litres() {
+        Quantity gallon = new Quantity(Unit.GALLON ,1.0);
+        Quantity litre = new Quantity(Unit.INCH ,3.78);
+        OperationImpl op = new OperationImpl();
+        double addition = op.add(gallon, litre);
+        Assert.assertEquals(7.57, addition, 0.1);
+    }
 }
