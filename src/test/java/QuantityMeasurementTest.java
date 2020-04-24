@@ -264,4 +264,12 @@ public class QuantityMeasurementTest {
             Assert.assertEquals("value should be positive", e.getMessage());
         }
     }
+
+    @Test
+    public void given1KgAnd1000Grams_ShouldReturnEqual() throws Exception {
+        Quantity kg = new Quantity(Unit.KG ,1);
+        Quantity gms = new Quantity(Unit.GRAM ,1000);
+        Boolean result = Unit.compare(kg, gms);
+        Assert.assertTrue(result);
+    }
 }
