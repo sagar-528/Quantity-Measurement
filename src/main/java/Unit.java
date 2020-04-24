@@ -3,7 +3,8 @@ public enum Unit {
     YARD(36.0, "Length"), CM(0.4, "Length"),
     LITRE(1.0, "Volume"), GALLON(3.78, "Volume"),
     ML(0.001, "Volume"), GRAM(0.001, "Mass"),
-    KG(1.0, "Mass"), TONNE(1000.0, "Mass");
+    KG(1.0, "Mass"), TONNE(1000.0, "Mass"),
+    FAHRENHEIT(1.0, "Temperature"), CELSIUS(2.12, "Temperature");
 
     double baseUnit;
     String quantityName;

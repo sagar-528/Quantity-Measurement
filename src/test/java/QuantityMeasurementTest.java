@@ -289,4 +289,12 @@ public class QuantityMeasurementTest {
         double addition = op.add(tonne, gms);
         Assert.assertEquals(1001, addition, 0.1);
     }
+
+    @Test
+    public void given212FahrenheitAnd100Celsius_ByComparingLength_ShouldReturnEquals() throws Exception {
+        Quantity fahrenheit = new Quantity(Unit.FAHRENHEIT ,212.0);
+        Quantity celsius = new Quantity(Unit.CELSIUS ,100.0);
+        boolean compareCheck =Unit.compare(fahrenheit, celsius);
+        Assert.assertTrue(compareCheck);
+    }
 }

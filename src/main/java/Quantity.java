@@ -6,7 +6,7 @@ public class Quantity
     public Quantity(Unit unit, double value) throws Exception
     {
         this.unit = unit;
-        if (value < 0.0) {
+        if (value < 0.0 && !unit.quantityName.equals("Temperature")) {
             throw new Exception("value should be positive", Exception.ExceptionType.INVALID_VALUE_GIVEN);
         }
             this.value = value;
