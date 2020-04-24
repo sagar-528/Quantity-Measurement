@@ -227,15 +227,6 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1GallonAnd3Point78Litres_ShouldReturn7point78Litres() throws Exception {
-        Quantity gallon = new Quantity(Unit.GALLON ,1.0);
-        Quantity litre = new Quantity(Unit.INCH ,3.78);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(gallon, litre);
-        Assert.assertEquals(7.57, addition, 0.1);
-    }
-
-    @Test
     public void given1litresAnd1000Ml_ShouldReturn2Litres() throws Exception {
         Quantity litre = new Quantity(Unit.LITRE ,1.0);
         Quantity ml = new Quantity(Unit.ML ,1000);
