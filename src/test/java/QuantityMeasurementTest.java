@@ -272,4 +272,12 @@ public class QuantityMeasurementTest {
         Boolean result = Unit.compare(kg, gms);
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void given1TonneAnd1000Kg_ShouldReturnEqual() throws Exception {
+        Quantity tonne = new Quantity(Unit.TONNE ,1);
+        Quantity kg = new Quantity(Unit.KG ,1000);
+        Boolean result = Unit.compare(tonne, kg);
+        Assert.assertTrue(result);
+    }
 }
