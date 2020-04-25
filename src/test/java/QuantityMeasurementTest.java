@@ -3,6 +3,7 @@ import org.junit.Test;
 
 public class QuantityMeasurementTest {
 
+
     @Test
     public void given0FeetAnd0Feet_ShouldReturnEquals() throws Exception {
         Quantity feet1 = new Quantity(Unit.FEET ,0.0);
@@ -178,8 +179,7 @@ public class QuantityMeasurementTest {
     public void given2InchAnd2Inch_ShouldReturn4Inch() throws Exception {
         Quantity inch1 = new Quantity(Unit.INCH ,2.0);
         Quantity inch2 = new Quantity(Unit.INCH ,2.0);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(inch1, inch2);
+        double addition = MeasurementOperation.add(inch1, inch2);
         Assert.assertEquals(4, addition, 0.0);
     }
 
@@ -187,8 +187,7 @@ public class QuantityMeasurementTest {
     public void given1FeetAnd2Inch_ShouldReturn14Inch() throws Exception {
         Quantity feet = new Quantity(Unit.FEET ,1.0);
         Quantity inch = new Quantity(Unit.INCH ,2.0);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(feet, inch);
+        double addition =MeasurementOperation.add(feet, inch);
         Assert.assertEquals(14, addition, 0.0);
     }
 
@@ -196,8 +195,7 @@ public class QuantityMeasurementTest {
     public void given1FeetAnd1Feet_ShouldReturn24Inch() throws Exception {
         Quantity feet1 = new Quantity(Unit.FEET ,1.0);
         Quantity feet2 = new Quantity(Unit.FEET ,1.0);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(feet1, feet2);
+        double addition = MeasurementOperation.add(feet1, feet2);
         Assert.assertEquals(24, addition, 0.0);
     }
 
@@ -205,8 +203,7 @@ public class QuantityMeasurementTest {
     public void given2InchAnd2Point5Cm_ShouldReturn3Inch() throws Exception {
         Quantity inch = new Quantity(Unit.INCH ,2.0);
         Quantity cm = new Quantity(Unit.CM ,2.5);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(inch, cm);
+        double addition = MeasurementOperation.add(inch, cm);
         Assert.assertEquals(3, addition, 0.0);
     }
 
@@ -230,8 +227,7 @@ public class QuantityMeasurementTest {
     public void given1litresAnd1000Ml_ShouldReturn2Litres() throws Exception {
         Quantity litre = new Quantity(Unit.LITRE ,1.0);
         Quantity ml = new Quantity(Unit.ML ,1000);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(litre, ml);
+        double addition = MeasurementOperation.add(litre, ml);
         Assert.assertEquals(2, addition, 0.1);
     }
 
@@ -239,9 +235,8 @@ public class QuantityMeasurementTest {
     public void givenLitreAndFeet_ShouldThrowException() throws Exception {
         Quantity litre = new Quantity(Unit.LITRE ,1.0);
         Quantity feet = new Quantity(Unit.FEET, 10.0);
-        OperationImpl op = new OperationImpl();
         try{
-            double result = op.add(feet, litre);
+            double result = MeasurementOperation.add(feet, litre);
         }catch (Exception e){
             Assert.assertEquals("Invalid Quantity name Measurement", e.getMessage());
         }
@@ -276,8 +271,7 @@ public class QuantityMeasurementTest {
     public void given1TonneAnd1000Grams_ShouldReturn1001Kg() throws Exception {
         Quantity tonne = new Quantity(Unit.TONNE ,1.0);
         Quantity gms= new Quantity(Unit.GRAM ,1000);
-        OperationImpl op = new OperationImpl();
-        double addition = op.add(tonne, gms);
+        double addition = MeasurementOperation.add(tonne, gms);
         Assert.assertEquals(1001, addition, 0.1);
     }
 
